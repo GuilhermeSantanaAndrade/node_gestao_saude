@@ -15,7 +15,7 @@ routes.get("/", async (req, res, next) => {
   }
 });
 
-routes.post("/", input.validatePOST2, async (req, res, next) => {
+routes.post("/", input.validatePOST, async (req, res, next) => {
   try {
     await ControllerCustomer.create(req, res);
   } catch (err) {
@@ -23,7 +23,23 @@ routes.post("/", input.validatePOST2, async (req, res, next) => {
   }
 });
 
-routes.get("/:id", input.validateGET1, async (req, res, next) => {
+routes.put("/:id", input.validatePUT, async (req, res, next) => {
+  try {
+    await ControllerCustomer.alter(req, res);
+  } catch (err) {
+    throwError(res, err);
+  }
+});
+
+routes.delete("/:id", input.validateDELETE, async (req, res, next) => {
+  try {
+    await ControllerCustomer.remove(req, res);
+  } catch (err) {
+    throwError(res, err);
+  }
+});
+
+routes.get("/:id", input.validateGET, async (req, res, next) => {
   try {
     await ControllerCustomer.findOne(req, res);
   } catch (err) {

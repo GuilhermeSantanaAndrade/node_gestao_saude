@@ -1,4 +1,4 @@
-import routesCustomers from "./routesUsers";
+import routesCustomers from "./routesCustomers";
 import { Router } from "express";
 
 const mainRoutes = Router();
