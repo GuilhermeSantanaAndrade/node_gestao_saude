@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import dbConnection from "./database/db.js";
+import dbConnection from "./database/db.js"; // import necessário para configurar a conexão
 
 class AppController {
   constructor() {

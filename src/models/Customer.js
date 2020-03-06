@@ -5,6 +5,14 @@ class Customer {
   cpf = "";
   email = "";
   telefone = "";
+  endereco = {
+    logradouro: "",
+    numero: undefined,
+    complemento: "",
+    bairro: "",
+    cidade: "",
+    estado: ""
+  };
 
   static findAll = () => {
     return executeCypher(`MATCH (c:Cliente) RETURN c`).then(response => {
