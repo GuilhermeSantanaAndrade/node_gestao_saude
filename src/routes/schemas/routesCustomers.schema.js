@@ -4,9 +4,8 @@ import { throwRefuse401 } from "../../utils/responses_struct";
 exports.validatePOST = async (req, res, next) => {
   const obj = Joi.object({
     nome: Joi.string()
-      .alphanum()
       .min(3)
-      .max(25)
+      .max(55)
       .required(),
     cpf: Joi.string()
       .min(11)
@@ -36,9 +35,8 @@ exports.validatePUT = async (req, res, next) => {
   const obj = Joi.object({
     id: Joi.number().required(),
     nome: Joi.string()
-      .alphanum()
       .min(3)
-      .max(25)
+      .max(55)
       .required(),
     cpf: Joi.string()
       .min(11)

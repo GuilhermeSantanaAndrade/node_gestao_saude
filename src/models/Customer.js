@@ -11,7 +11,7 @@ class Customer {
     complemento: "",
     bairro: "",
     cidade: "",
-    estado: ""
+    uf: ""
   };
 
   static findAll = () => {
@@ -31,7 +31,7 @@ class Customer {
             complemento: props.complemento,
             bairro: props.bairro,
             cidade: props.cidade,
-            estado: props.estado
+            uf: props.uf
           }
         };
       });
@@ -56,7 +56,7 @@ class Customer {
               complemento: props.complemento,
               bairro: props.bairro,
               cidade: props.cidade,
-              estado: props.estado
+              uf: props.uf
             }
           };
         });
@@ -76,7 +76,7 @@ class Customer {
                           complemento: "${obj.endereco.complemento || null}",
                           bairro: "${obj.endereco.bairro || null}",
                           cidade: "${obj.endereco.cidade || null}",
-                          estado: "${obj.endereco.estado || null}"
+                          uf: "${obj.endereco.uf || null}"
                          })`
     ).then(() => {
       return [];
@@ -97,7 +97,7 @@ class Customer {
                complemento: "${obj.endereco.complemento || null}",
                bairro: "${obj.endereco.bairro || null}",
                cidade: "${obj.endereco.cidade || null}",
-               estado: "${obj.endereco.estado || null}"
+               uf: "${obj.endereco.uf || null}"
               }`
     ).then(() => {
       return {};
