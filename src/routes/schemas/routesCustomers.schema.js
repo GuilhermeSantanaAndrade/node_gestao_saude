@@ -18,7 +18,8 @@ exports.validatePOST = async (req, res, next) => {
       .required(),
     email: Joi.string()
       .email()
-      .required()
+      .required(),
+    endereco: Joi.object().required()
   });
 
   let input = req.body;
@@ -49,7 +50,8 @@ exports.validatePUT = async (req, res, next) => {
       .required(),
     email: Joi.string()
       .email()
-      .required()
+      .required(),
+    endereco: Joi.object().required()
   });
 
   let input = {

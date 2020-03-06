@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import global from "./globals";
 import dbConnection from "./database/db.js";
 
 class AppController {

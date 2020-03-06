@@ -1,8 +1,14 @@
+import variables from "dotenv";
+
 const neo4j = require("neo4j-driver").v1;
 
+variables.config({
+  path: ".env"
+});
+
 const driver = neo4j.driver(
-  "bolt://localhost:7687",
-  neo4j.auth.basic(global.DB_USER, global.DB_PASSWORD)
+  process.env.DB_URL,
+  neo4j.auth.basic(process.env.DB_USER, process.env.DB_PASSWORD)
 );
 const session = driver.session();
 
