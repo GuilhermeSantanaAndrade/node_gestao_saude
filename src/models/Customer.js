@@ -6,6 +6,7 @@ class Customer {
   email = "";
   telefone = "";
   endereco = {
+    cep: "",
     logradouro: "",
     numero: undefined,
     complemento: "",
@@ -26,6 +27,7 @@ class Customer {
           email: props.email,
           telefone: props.telefone,
           endereco: {
+            cep: props.cep,
             logradouro: props.logradouro,
             numero: props.numero ? props.numero.low : undefined,
             complemento: props.complemento,
@@ -51,6 +53,7 @@ class Customer {
             email: props.email,
             telefone: props.telefone,
             endereco: {
+              cep: props.cep,
               logradouro: props.logradouro,
               numero: props.numero ? props.numero.low : undefined,
               complemento: props.complemento,
@@ -71,6 +74,7 @@ class Customer {
                           rg: "${obj.rg}", 
                           telefone: "${obj.telefone}", 
                           email: "${obj.email}",
+                          cep: "${obj.endereco.cep || null}",
                           logradouro: "${obj.endereco.logradouro || null}",
                           numero: ${obj.endereco.numero || null},
                           complemento: "${obj.endereco.complemento || null}",
@@ -92,6 +96,7 @@ class Customer {
                rg: "${obj.rg}", 
                telefone: "${obj.telefone}", 
                email: "${obj.email}",
+               cep: "${obj.endereco.cep || null}",
                logradouro: "${obj.endereco.logradouro || null}",
                numero: ${obj.endereco.numero || null},
                complemento: "${obj.endereco.complemento || null}",
