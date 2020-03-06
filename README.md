@@ -11,21 +11,39 @@ Projeto de gestão de saúde. (Node Backend)
 
 # rotas disponíveis
 GET: localhost:3000/clientes
+
 GET: localhost:3000/clientes/:id
+
 POST: localhost:3000/clientes 
+
  body: {
+ 
    nome = "",
+   
    cpf = "",
+   
    email = "",
+   
    telefone = "",
+   
    endereco = {
+   
      cep = ""
+     
      logradouro = "",
+     
      numero = 0,
+     
      complemento = "",
+     
      bairro = "",
+     
      cidade = "",
+     
      uf = ""
+     
    };
+   
 PUT: localhost:3000/clientes/:id
+
 DELETE: localhost:3000/clientes/:id
