@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import dbConnection from "./database/db.js"; // import necessário para configurar a conexão
+import { } from "./database/db.js"; // import necessário para configurar a conexão
 
 class AppController {
   constructor() {
@@ -21,7 +21,7 @@ class AppController {
   }
 
   handle404() {
-    this.express.use(function(req, res, next) {
+    this.express.use(function (req, res, next) {
       res.status("404").json({ status: 404, message: "URL não encontrada." });
       next();
     });
